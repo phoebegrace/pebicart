@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spark Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section id="header">
+      <a href="index.html"><img src="images/logo.png" class="logo" alt="" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">HOME</a></li>
+          <li><a class="active" href="community.html">COMMUNITY</a></li>
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="guide.html">GUIDE</a></li>
+          <li><a href="profile.html">PROFILE</a></li>
+          <li id="lg-bag">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+          </li>
+          <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+    <script>
+      $(document).ready(function () {
+        $("#myinput").on("keyup", function () {
+          var value = $(this).val().toLowerCase();
+          $("#pro div").filter(function () {
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+          });
+        });
+      });
+    </script>
+
+<section id="product1">
+<div class="des">
+    <br>
+    <br>
+<h2>aespa</h2> 
+<br>
+<br>
+</div>
+</section>
+
+<section id ="newsletter2"  class="section-p1 section-m1" >
+    <div class="section-title text-center"></div>
+    <div class="container">
+      <div class="row1">
+          <input id="myinput" type="text"  placeholder="Search..." class="form"> 
+      </section>
+
+
+      <section id="product1" class="section-p1 section-m1" >
+        <div class="pro-container" id="pro" onclick="window.location.href='aespa.html';">
+          <div class="pro" id="pro">
+            <img src="images/ka.jpg" alt="karina" />
+            <div class="des" id="pro">
+              <h5>Karina</h5>
+            </div>
+          </div>
+      
+          <div class="pro" id="pro">
+            <img src="images/gi.jpg" alt="giselle" />
+            <div class="des" id="pro">
+              <h5>Giselle</h5>
+            </div>
+          </div>
+      
+          <div class="pro" id="pro">
+            <img src="images/wi.jpg" alt="winter" />
+            <div class="des" id="pro">
+              <h5>Winter</h5>
+            </div>
+          </div>
+      
+          <div class="pro" id="pro">
+            <img src="images/ni.jpg" alt="ningning" />
+            <div class="des" id="pro">
+              <h5>Ningning</h5>
+            </div>
+          </div>
+          </div>
+        </section>
+
+          <section id="product1" class="section-p1 section-m1" >
+            <div class="pro-container" id="pro" onclick="window.location.href='aespa.html';">
+              <div class="pro" id="pro">
+                <div class="des" id="pro">
+                  <h5>Album Photocards</h5>
+                </div>
+              </div>
+          
+              <div class="pro" id="pro">
+                <div class="des" id="pro">
+                  <h5>Album Pre-order Benefits (POBs)</h5>
+                </div>
+              </div>
+          
+              <div class="pro" id="pro">
+                <div class="des" id="pro">
+                  <h5>MD Photocard Collection</h5>
+                </div>
+              </div>
+          
+              <div class="pro" id="pro">
+                <div class="des" id="pro">
+                  <h5>Promotional Photocard</h5>
+                </div>
+              </div>
+
+      
+
+
+  </body>
+</html>

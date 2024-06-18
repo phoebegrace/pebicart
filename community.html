@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spark Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section id="header">
+      <a href="index.html"><img src="images/logo.png" class="logo" alt="" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a  href="index.html">HOME</a></li>
+          <li><a class="active" href="community.html">COMMUNITY</a></li>
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="guide.html">BLOG</a></li>
+          <li><a href="profile.html">PROFILE</a></li>
+          <li id="lg-bag">
+            <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+          </li>
+          <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+
+      <script >
+
+        $(document).ready(function(){
+          $("#myinput").on("keyup",function(){
+          var value = $(this).val().toLowerCase();
+          $("#pro div").filter(function(){
+            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
+      
+          });
+        });
+          });
+      
+      
+      </script>
+
+
+
+<section id="comtext" class="section-p1 section-m1">
+  <div class="comleft"> 
+    <p>Ready to <strong>look for your biases</strong>?</p>
+    <p>Ready to <strong>complete your template</strong>?</p>
+    <p>Ready to <strong>flex your pulls</strong>?</p>
+    <p>Ready to <strong>cry</strong>?</p>
+    <p>Ready to <strong>let go</strong>?</p>
+    <p>Ready to <strong>be happy</strong>?</p>
+    <p>Ready to <strong>be satisfied</strong>?</p>
+    <p>Ready to <strong>get broke</strong>?</p>
+    <p>Ready to <strong>invest</strong>?</p>
+    <p>Ready to <strong>feel the sparks</strong>?</p>
+    <p>Ready to <strong>collect</strong>?</p>
+    <br>
+    <p><strong> Let's Start your Collecting Journey, Now! </strong> </p>
+    <p>check out some of the indemand photocards beside this</p>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <button onclick="window.location.href='community.html';">Photocard Corner</button>
+  </div>
+
+  <section id="product2" class="comright" class="section-p1 section-m1">
+    <h2>Featured Photocards</h2>
+    <div class="pro-container">
+      <div class="pro">
+        <img src="images/inde_bucketsoo.jpeg" alt="Bucketsoo" />
+        <div class="des">
+          <span>BLACKPINK</span>
+          <h5>Bucketsoo</h5>
+          <h4>₱850.00</h4>
+        </div>
+      </div>
+
+      <div class="pro" >
+        <img src="images/inde_ribbonrina.jpeg" alt="Ribbonrina" />
+        <div class="des" >
+          <span>aespa</span>
+          <h5>Ribbonrina</h5>
+          <h4>₱6,800.00</h4>
+        </div>
+      </div>
+
+      <div class="pro" >
+          <img src="images/inde_tetebread.jfif" alt="Tete Bread" />
+          <div class="des">
+            <span>BTS</span>
+            <h5>Tetebread</h5>
+            <h4>₱450.00</h4>
+          </div>
+        </div>
+
+      <div class="pro" >
+        <img src="images/inde_kforehead.jpg" alt="Kyungsoo Forehead" />
+        <div class="des">
+          <span>EXO</span>
+          <h5>Kyungsoo Forehead</h5>
+          <h4>₱2,000.00</h4>
+        </div>
+    </div>
+
+    <div class="pro">
+      <img src="images/inde_ndevil.jpeg" alt="Naeyeon Devil" />
+      <div class="des">
+        <span>Twice</span>
+        <h5>Nayeon Devil</h5>
+        <h4>₱850.00</h4>
+      </div>
+  </div>
+
+    <div class="pro">
+      <img src="images/inde_jenwink.jpg" alt="Jenwink" />
+      <div class="des">
+        <span>BLACKPINK</span>
+        <h5>Jenwink</h5>
+        <h4>₱850.00</h4>
+      </div>
+  </div>
+
+    <div class="pro">
+      <img src="images/inde_wintears.jpeg" alt="Winter Tears" />
+      <div class="des">
+        <span>aespa</span>
+        <h5>Wintears</h5>
+        <h4>₱900.00</h4>
+      </div>
+  </div>
+
+    <div class="pro">
+      <img src="images/inde_somiregla.jfif" alt="Somi Blood" />
+      <div class="des">
+        <span>Somi</span>
+        <h5>Special Blood</h5>
+        <h4>₱1,800.00</h4>
+      </div>
+    </div>
+
+    <div class="pro">
+      <img src="images/inde_soobinr.jfif" alt="soobinr" />
+      <div class="des">
+        <span>TXT</span>
+        <h5>Soobin R</h5>
+        <h4>₱500.00</h4>
+      </div>
+  </div>
+
+    <div class="pro">
+      <img src="images/inde_seultears.jpeg" alt="Seultears" />
+      <div class="des">
+        <span>Red Velvet</span>
+        <h5>Seultears</h5>
+        <h4>₱2,500.00</h4>
+      </div>
+  </div>
+
+      <div class="pro">
+      <img src="images/inde_jaybraso.jpg" alt="Seultears" />
+      <div class="des">
+        <span>Enhypen</span>
+        <h5>Jay Braso</h5>
+        <h4>₱350.00</h4>
+      </div>
+  </div>
+
+      <div class="pro">
+        <img src="images/inde_sybs.jpg" alt="SYBC" />
+        <div class="des">
+          <span>NCT</span>
+          <h5>Jaehyun SYBC</h5>
+          <h4>₱70,000.00</h4>
+        </div>
+    </div>
+
+  </section>
+</section>
+
+<section id="feature" class="section-p1 section-m1">
+  <div class="fe-box">
+    <img src="images/buy.png" alt="" />
+    <h6>BUY YOUR PRIO</h6>
+  </div>
+  <div class="fe-box">
+    <img src="images/sell.png" alt="" />
+    <h6>SELL YOUR ITEMS</h6>
+  </div>
+  <div class="fe-box">
+    <img src="images/trade.png" alt="" />
+    <h6>EASY TRADING</h6>
+  </div>
+  <div class="fe-box">
+    <img src="images/nationwide.png" alt="" />
+    <h6>SHIPS WORLDWIDE</h6>
+  </div>
+  <div class="fe-box">
+    <img src="images/save money.png" alt="" />
+    <h6>SAVE MONEY</h6>
+  </div>
+</section>
+
+<section id ="newsletter2"  class="section-p1 section-m1">
+  <div class="section-title text-center"></div>
+  <div class="container">
+    <div class="row1">
+        <input id="myinput" type="text"  placeholder="Search..." class="form"> 
+    </section>
+
+<section id="product1" class="section-p1 section-m1" >
+  <div class="pro-container" id="pro" onclick="window.location.href='aespa.html';">
+    <div class="pro" id="pro">
+      <img src="images/aespa.png" alt="aespa" />
+      <div class="des" id="pro">
+        <h5>aespa</h5>
+      </div>
+    </div>
+
+    <div class="pro" id="pro">
+      <img src="images/blackpink.png" alt="blackpink" />
+      <div class="des" id="pro">
+        <h5>BLACKPINK</h5>
+      </div>
+    </div>
+
+    <div class="pro" id="pro">
+      <img src="images/bts.png" alt="bangtan" />
+      <div class="des" id="pro">
+        <h5>BTS</h5>
+      </div>
+    </div>
+
+    <div class="pro" id="pro">
+      <img src="images/enhypen.png" alt="enhypen" />
+      <div class="des" id="pro">
+        <h5>Enhypen</h5>
+      </div>
+    </div>
+
+    <div class="pro" id="pro">
+      <img src="images/itzy.png" alt="itzy" />
+      <div class="des" id="pro">
+        <h5>Itzy</h5>
+      </div>
+    </div>
+      
+    <div class="pro" id="pro">
+      <img src="images/ive.png" alt="ive" />
+      <div class="des" id="pro">
+        <h5>Ive</h5>
+      </div>
+    </div>
+
+    <div class="pro" id="pro">
+      <img src="images/iu.png" alt="iu" />
+      <div class="des" id="pro">
+        <h5>IU</h5>
+      </div>
+    </div>
+
+    <div class="pro" id="pro">
+      <img src="images/nct127.png" alt="nct127" />
+      <div class="des" id="pro">
+        <h5>NCT 127</h5>
+      </div>
+    </div>
+
+    <div class="pro" id="pro">
+      <img src="images/nct.png" alt="nctdream" />
+      <div class="des" id="pro">
+        <h5>NCT Dream</h5>
+      </div>
+    </div>
+
+    <div class="pro" id="pro">
+      <img src="images/red velvet.png" alt="Red Velvet" />
+      <div class="des" id="pro">
+        <h5>Red Velvet</h5>
+      </div>
+    </div>
+
+    <div class="pro" id="pro">
+      <img src="images/twice.png" alt="Twice" />
+      <div class="des" id="pro">
+        <h5>Twice</h5>
+      </div>
+    </div>
+    
+    <div class="pro" id="pro">
+      <img src="images/txt.png" alt="TXT" />
+      <div class="des" id="pro">
+        <h5>Tomorrow X Together</h5>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<section id="newsletter" class="section-p1 section-m1">
+  <div class="newstext">
+    <h4>Sign Up for Newsletters</h4>
+    <p>Get E-mail updates about our latest shop and <span>special offers.</span> </p>
+  </div>
+  <div class="form">
+    <input type="Text" placeholder="Your email address">
+    <button class="normal">Sign Up</button>
+  </div>
+
+</section>
+
+<footer class="section-p1">
+  <div class="col">
+    <img class="logo" src="images/logo.png" alt="logo">
+    <h4>Contact</h4>
+    <p><strong>Address:</strong> Purok 3, Funda, Hamtic, Antique</p>
+    <p> <strong>Phone:</strong> 0961-808-0709 / 0935-436-8587</p>
+    <p> <strong>Hours:</strong> 7:00 - 20:00, Mon - Sat</p>
+    <div class="follow">
+        <h4>Follow us!</h4>
+        <div class="icon">
+          <i class="fab fa-facebook-f"></i>
+          <i class="fab fa-twitter"></i>
+          <i class="fab fa-instagram"></i>
+          <i class="fab fa-youtube"></i>
+        </div>
+    </div>
+  </div>
+  <div class="col">
+    <h4>About</h4>
+    <a href="#">About us</a>
+    <a href="#">Delivery Information</a>
+    <a href="#">Privacy Policy</a>
+    <a href="#">Terms and Conditions</a>
+    <a href="#">Contact Us</a>
+  </div>
+  <div class="col">
+    <h4>My Account</h4>
+    <a href="#">Sign In</a>
+    <a href="#">View Cart</a>
+    <a href="#">My Wishlist</a>
+    <a href="#">Track My Order</a>
+    <a href="#">Help</a>
+  </div>
+  <div class="col install">
+    <h4>Install App</h4>
+    <p>From App Store or Google Play</p>
+    <div class="row">
+      <img src="images/appstore.png" alt="App Store">
+      <img src="images/googleplay.png" alt="Play Store">
+    </div>
+    <p class="gateways">Secured Payment Gateways</p>
+    <img src="images/paymentgateways.png" alt="Payment Gateways" >
+  </div>
+
+  <div class="copyright">
+    <p>	&copy; 2022, Spark Cart - made by <strong>Phoebe Grace Juayong</strong></p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

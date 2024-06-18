@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spark Cart</title>
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <section id="header">
+      <a href="index.html"><img src="images/logo.png" class="logo" alt="" /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">HOME</a></li>
+          <li><a  href="community.html">COMMUNITY</a></li>
+          <li><a href="shop.html">SHOP</a></li>
+          <li><a href="guide.html">BLOG</a></li>
+          <li><a href="profile.html">PROFILE</a></li>
+          <li id="lg-bag">
+            <a  class="active" href="cart.html"><i class="far fa-shopping-bag"></i></a>
+          </li>
+          <a href="#" id="close"><i class="far fa-times"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+    <section id="page-header" class="blog-header">
+      <h2>Ready to Checkout?</h2>
+      <p>Enjoy 70% discount on selected items using coupons!</p>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <table width 100% >
+            <thead>
+                <tr>
+                    <td>Remove</td>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Subtotal</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                    <td><img src="images/qm.jpg" ></td>
+                    <td>something</td>
+                    <td>₱0.00 or more, idk</td>
+                    <td><input type="number" value="1"></td>
+                    <td>₱0.00 or more, idk</td>
+                </tr>
+                <tr>
+                  <td><a href="#"><i class="far fa-times-circle"></i></a></td>
+                  <td><img src="images/qm.jpg" ></td>
+                  <td>something</td>
+                  <td>₱0.00 or more, idk</td>
+                  <td><input type="number" value="1"></td>
+                  <td>₱0.00 or more, idk</td>
+              </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section id="cart-add" class="section-p1">
+        <div id="coupon">
+            <h3>Apply Coupon</h3>
+        
+            <input type="text" placeholder="Enter your coupon">
+            <button class="normal">Apply</button>
+        </div>
+    </div>
+
+    <div id="subtotal">
+        <h3>Cart Total</h3>
+        <table>
+            <tr>
+                <td>Cart Subtotal</td>
+                <td>₱0.00</td>
+            </tr>
+            <tr>
+                <td>Shipping</td>
+                <td>Free</td>
+            </tr>
+            <tr>
+                <td><strong>Total</strong></td>
+                <td><strong>₱0.00</strong></td>
+            </tr>
+        </table>
+        <div id="coupon">
+          <p>You'll receive an email about what you have puchased.</p>
+        <button class="normal"onclick="myfunction()">Proceed to checkout</button> </div>
+    </div>
+</div>
+</div>
+    </section>
+
+  </body>
+
+  <section id="newsletter" class="section-p1 section-m1">
+    <div class="newstext">
+      <h4>Sign Up for Newsletters</h4>
+      <p>Get E-mail updates about our latest shop and <span>special offers.</span> </p>
+    </div>
+    <div class="form">
+      <input type="Text" placeholder="Your email address">
+      <button class="normal">Sign Up</button>
+    </div>
+
+  </section>
+
+  <footer class="section-p1">
+    <div class="col">
+      <img class="logo" src="images/logo.png" alt="logo">
+      <h4>Contact</h4>
+      <p><strong>Address:</strong> Purok 3, Funda, Hamtic, Antique</p>
+      <p> <strong>Phone:</strong> 0961-808-0709 / 0935-436-8587</p>
+      <p> <strong>Hours:</strong> 7:00 - 20:00, Mon - Sat</p>
+      <div class="follow">
+          <h4>Follow us!</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+      </div>
+    </div>
+    <div class="col">
+      <h4>About</h4>
+      <a href="#">About us</a>
+      <a href="#">Delivery Information</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Terms and Conditions</a>
+      <a href="#">Contact Us</a>
+    </div>
+    <div class="col">
+      <h4>My Account</h4>
+      <a href="#">Sign In</a>
+      <a href="#">View Cart</a>
+      <a href="#">My Wishlist</a>
+      <a href="#">Track My Order</a>
+      <a href="#">Help</a>
+    </div>
+    <div class="col install">
+      <h4>Install App</h4>
+      <p>From App Store or Google Play</p>
+      <div class="row">
+        <img src="images/appstore.png" alt="App Store">
+        <img src="images/googleplay.png" alt="Play Store">
+      </div>
+      <p class="gateways">Secured Payment Gateways</p>
+      <img src="images/paymentgateways.png" alt="Payment Gateways" >
+    </div>
+
+    <div class="copyright">
+      <p>	&copy; 2022, Spark Cart - made by <strong>Phoebe Grace Juayong</strong></p>
+    </div>
+  </footer>
+  <script src="script2.js"></script>
+</body>
+</html>
+
+
+
+</html>
