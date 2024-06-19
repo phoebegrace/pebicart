@@ -10,7 +10,7 @@
       href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css" />
   </head>
 
@@ -19,10 +19,8 @@
       <a href="index.html"><img src="images/logo.png" class="logo" alt="" /></a>
       <div>
         <ul id="navbar">
-          <li><a  href="index.html">HOME</a></li>
-          <li><a class="active" href="community.html">COMMUNITY</a></li>
-          <li><a href="shop.html">SHOP</a></li>
-          <li><a href="guide.html">BLOG</a></li>
+          <li><a href="index.html">HOME</a></li>
+          <li><a class="active" href="community.html">COLLECTIONS</a></li>
           <li><a href="profile.html">PROFILE</a></li>
           <li id="lg-bag">
             <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
@@ -36,342 +34,1391 @@
       </div>
     </section>
 
+    <script>
+$(document).ready(function() {
+  function filterProducts() {
+    var inputValue = $("#myinput").val().toLowerCase();
+    var selectValue = $("#era-select").val().toLowerCase();
 
-      <script >
+    $(".pro, filter-text").filter(function() {
+      var text = $(this).text().toLowerCase();
+      var matchesInput = text.indexOf(inputValue) > -1;
+      var matchesSelect = selectValue === "all" || text.indexOf(selectValue) > -1;
 
-        $(document).ready(function(){
-          $("#myinput").on("keyup",function(){
-          var value = $(this).val().toLowerCase();
-          $("#pro div").filter(function(){
-            $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1);
-      
-          });
-        });
-          });
-      
-      
-      </script>
+      $(this).toggle(matchesInput && matchesSelect);
+    });
+  }
+
+  $("#myinput").on("keyup", filterProducts);
+  $("#era-select").on("change", filterProducts);
+});
 
 
+      document.addEventListener("DOMContentLoaded", function() {
+  const flipContainers = document.querySelectorAll('.flip-container');
 
-<section id="comtext" class="section-p1 section-m1">
-  <div class="comleft"> 
-    <p>Ready to <strong>look for your biases</strong>?</p>
-    <p>Ready to <strong>complete your template</strong>?</p>
-    <p>Ready to <strong>flex your pulls</strong>?</p>
-    <p>Ready to <strong>cry</strong>?</p>
-    <p>Ready to <strong>let go</strong>?</p>
-    <p>Ready to <strong>be happy</strong>?</p>
-    <p>Ready to <strong>be satisfied</strong>?</p>
-    <p>Ready to <strong>get broke</strong>?</p>
-    <p>Ready to <strong>invest</strong>?</p>
-    <p>Ready to <strong>feel the sparks</strong>?</p>
-    <p>Ready to <strong>collect</strong>?</p>
-    <br>
-    <p><strong> Let's Start your Collecting Journey, Now! </strong> </p>
-    <p>check out some of the indemand photocards beside this</p>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <button onclick="window.location.href='community.html';">Photocard Corner</button>
-  </div>
+  flipContainers.forEach(container => {
+    container.querySelector('.front').addEventListener('click', function() {
+      container.classList.toggle('flip');
+    });
 
-  <section id="product2" class="comright" class="section-p1 section-m1">
-    <h2>Featured Photocards</h2>
-    <div class="pro-container">
-      <div class="pro">
-        <img src="images/inde_bucketsoo.jpeg" alt="Bucketsoo" />
-        <div class="des">
-          <span>BLACKPINK</span>
-          <h5>Bucketsoo</h5>
-          <h4>₱850.00</h4>
+    container.querySelector('.back').addEventListener('click', function() {
+      container.classList.toggle('flip');
+
+    });
+  });
+});
+
+
+    </script>
+
+    <section id="newsletter2" class="section-p1 section-m1">
+      <div class="section-title text-center"></div>
+      <div class="container">
+        <div class="row1">
+          <input id="myinput" type="text" placeholder="Search..." class="form">
         </div>
       </div>
+    </section>
 
-      <div class="pro" >
-        <img src="images/inde_ribbonrina.jpeg" alt="Ribbonrina" />
-        <div class="des" >
-          <span>aespa</span>
-          <h5>Ribbonrina</h5>
-          <h4>₱6,800.00</h4>
+    <section id="search-navigation">
+      <div class="nav-links">
+        <a class="active" href="#">Templates</a>
+        <a href="#for-sale">For Sale</a>
+        <a href="#wishlists">Wishlists</a>
+      </div>
+    </section>
+
+    <section id="product2" class="comright section-p1 section-m1">
+
+
+      <div class="filter-dropdowns">
+        <div class="dropdown">
+          <label for="era-select">Choose Era:</label>
+          <select id="era-select" class="filter-text">
+            <option value="all">All</option>
+            <option value="hot-mess">Hot Mess</option>
+            <option value="armageddon">Armageddon</option>
+            <option value="drama">Drama</option>
+            <option value="better-things">Better Things</option>
+            <option value="my-world">My World</option>
+            <option value="got-the-beat">GOT: The Beat</option>
+            <option value="girls">Girls</option>
+            <option value="savage">Savage</option>
+            <option value="next-level">Next Level</option>
+            <option value="forever">Forever</option>
+            <option value="black-mamba">Black Mamba</option>
+          </select>
+        </div>
+      
+        <div class="dropdown">
+          <label for="status-select">Choose Status:</label>
+          <select id="status-select" class="filter-text">
+            <option value="all">All</option>
+            <option value="owned">Owned</option>
+            <option value="stbo">STBO</option>
+            <option value="iso">Wishlists</option>
+            <option value="not-collecting">Not Collecting</option>
+          </select>
         </div>
       </div>
+      
+      
+      
+  
+      <div class="pro-container">
 
-      <div class="pro" >
-          <img src="images/inde_tetebread.jfif" alt="Tete Bread" />
+<!-- Armageddon Era -->
+        <div class="pro">
+          <div class="flip-container">
+            <div class="flipper">
+              <img src="images/armageddon/mypower_k.png" alt="Front Image" class="front" />
+              <img src="images/armageddon/b_mypower_k.png" alt="Back Image" class="back" />
+            </div>
+          </div>
           <div class="des">
-            <span>BTS</span>
-            <h5>Tetebread</h5>
-            <h4>₱450.00</h4>
+            <span>aespa Karina</span>
+            <h5>My Power</h5>
+            <h4>Armageddon album pc</h4>
           </div>
         </div>
 
-      <div class="pro" >
-        <img src="images/inde_kforehead.jpg" alt="Kyungsoo Forehead" />
-        <div class="des">
-          <span>EXO</span>
-          <h5>Kyungsoo Forehead</h5>
-          <h4>₱2,000.00</h4>
+        <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/mypower_g.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_mypower_g.png" alt="Back Image" class="back" />
+          </div>
         </div>
-    </div>
-
-    <div class="pro">
-      <img src="images/inde_ndevil.jpeg" alt="Naeyeon Devil" />
-      <div class="des">
-        <span>Twice</span>
-        <h5>Nayeon Devil</h5>
-        <h4>₱850.00</h4>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>My Power</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
       </div>
-  </div>
-
-    <div class="pro">
-      <img src="images/inde_jenwink.jpg" alt="Jenwink" />
-      <div class="des">
-        <span>BLACKPINK</span>
-        <h5>Jenwink</h5>
-        <h4>₱850.00</h4>
-      </div>
-  </div>
-
-    <div class="pro">
-      <img src="images/inde_wintears.jpeg" alt="Winter Tears" />
-      <div class="des">
-        <span>aespa</span>
-        <h5>Wintears</h5>
-        <h4>₱900.00</h4>
-      </div>
-  </div>
-
-    <div class="pro">
-      <img src="images/inde_somiregla.jfif" alt="Somi Blood" />
-      <div class="des">
-        <span>Somi</span>
-        <h5>Special Blood</h5>
-        <h4>₱1,800.00</h4>
-      </div>
-    </div>
-
-    <div class="pro">
-      <img src="images/inde_soobinr.jfif" alt="soobinr" />
-      <div class="des">
-        <span>TXT</span>
-        <h5>Soobin R</h5>
-        <h4>₱500.00</h4>
-      </div>
-  </div>
-
-    <div class="pro">
-      <img src="images/inde_seultears.jpeg" alt="Seultears" />
-      <div class="des">
-        <span>Red Velvet</span>
-        <h5>Seultears</h5>
-        <h4>₱2,500.00</h4>
-      </div>
-  </div>
 
       <div class="pro">
-      <img src="images/inde_jaybraso.jpg" alt="Seultears" />
-      <div class="des">
-        <span>Enhypen</span>
-        <h5>Jay Braso</h5>
-        <h4>₱350.00</h4>
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/mypower_w.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_mypower_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>My Power</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
       </div>
-  </div>
 
       <div class="pro">
-        <img src="images/inde_sybs.jpg" alt="SYBC" />
-        <div class="des">
-          <span>NCT</span>
-          <h5>Jaehyun SYBC</h5>
-          <h4>₱70,000.00</h4>
+          <div class="flip-container">
+            <div class="flipper">
+              <img src="images/armageddon/mypower_n.png" alt="Front Image" class="front" />
+              <img src="images/armageddon/b_mypower_n.png" alt="Back Image" class="back" />
+            </div>
+          </div>
+          <div class="des">
+            <span>aespa Ningning</span>
+            <h5>My Power</h5>
+            <h4>Armageddon album pc</h4>
+          </div>
         </div>
+
+        <div class="pro">
+            <div class="flip-container">
+            <div class="flipper">
+              <img src="images/armageddon/sb_k.png" alt="Front Image" class="front" />
+              <img src="images/armageddon/b_sb_k.png" alt="Back Image" class="back" />
+            </div>
+          </div>
+          <div class="des">
+            <span>aespa Karina</span>
+            <h5>Superbeing</h5>
+            <h4>Armageddon album pc</h4>
+          </div>
+        </div>
+
+        <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/sb_g.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_sb_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Superbeing</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/sb_w.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_sb_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Superbeing</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/sb_n.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_sb_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Superbeing</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/at_k.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_at_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Authentic</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/at_g.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_at_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Authentic</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/at_w.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_at_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Authentic</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/at_n.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_at_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Authentic</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/poster_k.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_poster_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Poster</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/poster_g.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_poster_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Poster</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/poster_w.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_poster_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Poster</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/poster_n.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_poster_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Poster</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zineA_k.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zineA_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Zine A</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zineA_g.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zineA_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Zine A</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zineA_w.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zineA_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Zine A</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zineA_n.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zineA_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Zine A</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zineB_k.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zineB.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Zine B</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zineB_g.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zineB.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Zine B</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zineB_w.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zineB.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Zine B</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zineB_n.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zineB.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Zine B</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zinejpn_k.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zinejpn_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Zine Japan Exclusive</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zinejpn_g.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zinejpn_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Zine Japan Exclusive</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zinejpn_w.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zinejpn_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Zine Japan Exclusive</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/zinejpn_n.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_zinejpn_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Zine Japan Exclusive</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/postereu_k.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_postereu_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Poster Europe Exclusive</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/postereu_g.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_postereu_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Poster Europe Exclusive</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/postereu_w.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_postereu_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Poster Europe Exclusive</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/postereu_n.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_postereu_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Poster Europe Exclusive</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/smini_k.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_smini_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>SMini</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/smini_g.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_smini_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>SMini</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/smini_w.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_smini_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>SMini</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/smini_n.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_smini_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>SMini</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/cdp_k.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_cdp_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>CD Player</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/cdp_g.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_cdp_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>CD Player</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/cdp_w.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_cdp_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>CD Player</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/cdp_n.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_cdp_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>CD Player</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/at_4.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_at_4.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Group</span>
+          <h5>Authentic</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/armageddon/cdp_4.png" alt="Front Image" class="front" />
+            <img src="images/armageddon/b_cdp_4.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Group</span>
+          <h5>CD Player</h5>
+          <h4>Armageddon album pc</h4>
+        </div>
+      </div>
+
+<!-- Drama Era -->
+      
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/scene_k.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_scene_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Scene</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/scene_g.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_scene_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Scene</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/scene_w.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_scene_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Scene</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+    
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/scene_n.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_scene_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Scene</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/giant_k.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_giant_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Giant</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/giant_g.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_giant_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Giant</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/giant_w.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_giant_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Giant</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/giant_n.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_giant_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Giant</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/sq_k.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_sq_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Sequence</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/sq_g.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_sq_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Sequence</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/sq_w.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_sq_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Sequence</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/sq_n.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_sq_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Sequence</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/sqA_k.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_sq_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Sequence</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/sqA_g.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_sq_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Sequence</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/sqA_w.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_sq_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Sequence</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/sqA_n.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_sq_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Sequence</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/drama_k.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_drama_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Drama</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/drama_g.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_drama_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Drama</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/drama_w.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_drama_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Drama</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/drama_n.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_drama_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Drama</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/smini_k.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_smini_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>SMini</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/smini_g.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_smini_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>SMini</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/smini_w.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_smini_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>SMini</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/smini_n.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_smini_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>SMini</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/amazon_k.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_amazon_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Amazon US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/amazon_g.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_amazon_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Amazon US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/amazon_w.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_amazon_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Amazon US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/amazon_n.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_amazon_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Amazon US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/target_k.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_target_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Target US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/target_g.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_target_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Target US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/target_w.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_target_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Target US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/target_n.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_target_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Target US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/bnn_k.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_bnn_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Barnes&Noble US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/bnn_g.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_bnn_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Barnes&Noble US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/bnn_w.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_bnn_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Barnes&Noble US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/bnn_n.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_bnn_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Barnes&Noble US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/wm_k.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_wm_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Walmart US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/wm_g.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_wm_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Walmart US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/wm_w.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_scene_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Walmart US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/wm_n.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_wm_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Walmart US Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/jp_k.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_jp_k.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Karina</span>
+          <h5>Japan Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/jp_g.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_jp_g.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Giselle</span>
+          <h5>Japan Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/jp_w.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_jp_w.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Winter</span>
+          <h5>Japan Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+      <div class="pro">
+        <div class="flip-container">
+          <div class="flipper">
+            <img src="images/drama/jp_n.png" alt="Front Image" class="front" />
+            <img src="images/drama/b_jp_n.png" alt="Back Image" class="back" />
+          </div>
+        </div>
+        <div class="des">
+          <span>aespa Ningning</span>
+          <h5>Japan Exclusive</h5>
+          <h4>Drama album pc</h4>
+        </div>
+      </div>
+
+
+      </div>
     </div>
-
-  </section>
-</section>
-
-<section id="feature" class="section-p1 section-m1">
-  <div class="fe-box">
-    <img src="images/buy.png" alt="" />
-    <h6>BUY YOUR PRIO</h6>
-  </div>
-  <div class="fe-box">
-    <img src="images/sell.png" alt="" />
-    <h6>SELL YOUR ITEMS</h6>
-  </div>
-  <div class="fe-box">
-    <img src="images/trade.png" alt="" />
-    <h6>EASY TRADING</h6>
-  </div>
-  <div class="fe-box">
-    <img src="images/nationwide.png" alt="" />
-    <h6>SHIPS WORLDWIDE</h6>
-  </div>
-  <div class="fe-box">
-    <img src="images/save money.png" alt="" />
-    <h6>SAVE MONEY</h6>
-  </div>
-</section>
-
-<section id ="newsletter2"  class="section-p1 section-m1">
-  <div class="section-title text-center"></div>
-  <div class="container">
-    <div class="row1">
-        <input id="myinput" type="text"  placeholder="Search..." class="form"> 
     </section>
 
-<section id="product1" class="section-p1 section-m1" >
-  <div class="pro-container" id="pro" onclick="window.location.href='aespa.html';">
-    <div class="pro" id="pro">
-      <img src="images/aespa.png" alt="aespa" />
-      <div class="des" id="pro">
-        <h5>aespa</h5>
-      </div>
-    </div>
-
-    <div class="pro" id="pro">
-      <img src="images/blackpink.png" alt="blackpink" />
-      <div class="des" id="pro">
-        <h5>BLACKPINK</h5>
-      </div>
-    </div>
-
-    <div class="pro" id="pro">
-      <img src="images/bts.png" alt="bangtan" />
-      <div class="des" id="pro">
-        <h5>BTS</h5>
-      </div>
-    </div>
-
-    <div class="pro" id="pro">
-      <img src="images/enhypen.png" alt="enhypen" />
-      <div class="des" id="pro">
-        <h5>Enhypen</h5>
-      </div>
-    </div>
-
-    <div class="pro" id="pro">
-      <img src="images/itzy.png" alt="itzy" />
-      <div class="des" id="pro">
-        <h5>Itzy</h5>
-      </div>
-    </div>
-      
-    <div class="pro" id="pro">
-      <img src="images/ive.png" alt="ive" />
-      <div class="des" id="pro">
-        <h5>Ive</h5>
-      </div>
-    </div>
-
-    <div class="pro" id="pro">
-      <img src="images/iu.png" alt="iu" />
-      <div class="des" id="pro">
-        <h5>IU</h5>
-      </div>
-    </div>
-
-    <div class="pro" id="pro">
-      <img src="images/nct127.png" alt="nct127" />
-      <div class="des" id="pro">
-        <h5>NCT 127</h5>
-      </div>
-    </div>
-
-    <div class="pro" id="pro">
-      <img src="images/nct.png" alt="nctdream" />
-      <div class="des" id="pro">
-        <h5>NCT Dream</h5>
-      </div>
-    </div>
-
-    <div class="pro" id="pro">
-      <img src="images/red velvet.png" alt="Red Velvet" />
-      <div class="des" id="pro">
-        <h5>Red Velvet</h5>
-      </div>
-    </div>
-
-    <div class="pro" id="pro">
-      <img src="images/twice.png" alt="Twice" />
-      <div class="des" id="pro">
-        <h5>Twice</h5>
-      </div>
-    </div>
-    
-    <div class="pro" id="pro">
-      <img src="images/txt.png" alt="TXT" />
-      <div class="des" id="pro">
-        <h5>Tomorrow X Together</h5>
-      </div>
-    </div>
-
-  </div>
-</section>
+    <button id="backToTopBtn" title="Back to Top"><i class="fas fa-arrow-up"></i></button>
 
 
-<section id="newsletter" class="section-p1 section-m1">
-  <div class="newstext">
-    <h4>Sign Up for Newsletters</h4>
-    <p>Get E-mail updates about our latest shop and <span>special offers.</span> </p>
-  </div>
-  <div class="form">
-    <input type="Text" placeholder="Your email address">
-    <button class="normal">Sign Up</button>
-  </div>
-
-</section>
-
-<footer class="section-p1">
-  <div class="col">
-    <img class="logo" src="images/logo.png" alt="logo">
-    <h4>Contact</h4>
-    <p><strong>Address:</strong> Purok 3, Funda, Hamtic, Antique</p>
-    <p> <strong>Phone:</strong> 0961-808-0709 / 0935-436-8587</p>
-    <p> <strong>Hours:</strong> 7:00 - 20:00, Mon - Sat</p>
-    <div class="follow">
-        <h4>Follow us!</h4>
-        <div class="icon">
-          <i class="fab fa-facebook-f"></i>
-          <i class="fab fa-twitter"></i>
-          <i class="fab fa-instagram"></i>
-          <i class="fab fa-youtube"></i>
+    <section id="product1" class="section-p1 section-m1">
+      <h2>Artists</h2>
+      <div class="pro-container" id="pro" onclick="window.location.href='aespa.html';">
+        <div class="pro" id="pro">
+          <img src="images/aespa.png" alt="aespa" />
+          <div class="des" id="pro">
+            <h5>aespa</h5>
+          </div>
         </div>
-    </div>
-  </div>
-  <div class="col">
-    <h4>About</h4>
-    <a href="#">About us</a>
-    <a href="#">Delivery Information</a>
-    <a href="#">Privacy Policy</a>
-    <a href="#">Terms and Conditions</a>
-    <a href="#">Contact Us</a>
-  </div>
-  <div class="col">
-    <h4>My Account</h4>
-    <a href="#">Sign In</a>
-    <a href="#">View Cart</a>
-    <a href="#">My Wishlist</a>
-    <a href="#">Track My Order</a>
-    <a href="#">Help</a>
-  </div>
-  <div class="col install">
-    <h4>Install App</h4>
-    <p>From App Store or Google Play</p>
-    <div class="row">
-      <img src="images/appstore.png" alt="App Store">
-      <img src="images/googleplay.png" alt="Play Store">
-    </div>
-    <p class="gateways">Secured Payment Gateways</p>
-    <img src="images/paymentgateways.png" alt="Payment Gateways" >
-  </div>
+        <div class="pro" id="pro">
+          <img src="images/blackpink.png" alt="blackpink" />
+          <div class="des" id="pro">
+            <h5>BLACKPINK</h5>
+          </div>
+        </div>
+      </div>
+    </section>
 
-  <div class="copyright">
-    <p>	&copy; 2022, Spark Cart - made by <strong>Phoebe Grace Juayong</strong></p>
-  </div>
-</footer>
-<script src="script.js"></script>
-</body>
+    <section id="newsletter" class="section-p1 section-m1">
+      <div class="newstext">
+        <h4>Sign Up for Newsletters</h4>
+        <p>Get E-mail updates about our latest shop and <span>special offers.</span></p>
+      </div>
+      <div class="form">
+        <input type="Text" placeholder="Your email address">
+        <button class="normal">Sign Up</button>
+      </div>
+    </section>
+
+    <footer class="section-p1">
+      <div class="col">
+        <img class="logo" src="images/logo.png" alt="logo">
+        <h4>Contact</h4>
+        <p><strong>Address:</strong> Purok 3, Funda, Hamtic, Antique</p>
+        <p><strong>Phone:</strong> 0961-808-0709 / 0935-436-8587</p>
+        <p><strong>Hours:</strong> 7:00 - 20:00, Mon - Sat</p>
+        <div class="follow">
+          <h4>Follow us!</h4>
+          <div class="icon">
+            <i class="fab fa-facebook-f"></i>
+            <i class="fab fa-twitter"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-youtube"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Contact Us</a>
+      </div>
+      <div class="col">
+        <h4>My Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlist</a>
+        <a href="#">Track My Order</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="col install">
+        <h4>Install App</h4>
+        <p>From App Store or Google Play</p>
+        <div class="row">
+          <img src="images/appstore.png" alt="App Store">
+          <img src="images/googleplay.png" alt="Play Store">
+        </div>
+        <p class="gateways">Secured Payment Gateways</p>
+        <img src="images/paymentgateways.png" alt="Payment Gateways">
+      </div>
+      <div class="copyright">
+        <p>&copy; 2022, Spark Cart - made by <strong>Phoebe Grace Juayong</strong></p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>

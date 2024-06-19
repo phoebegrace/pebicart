@@ -62,7 +62,7 @@ body {
 }
 
 .logo {
-    height: 100px;
+    height: 50px;
 }
 
 #navbar {
@@ -235,6 +235,53 @@ border-top-right-radius: 0;
 border-bottom-right-radius: 0;
 }
 
+#search-navigation {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjust the margin as needed */
+}
+  
+#search-navigation .nav-links {
+    display: flex;
+    gap: 20px; /* Space between the links */
+}
+
+#search-navigation .nav-links a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #1a1a1a;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+  
+#search-navigation .nav-links a:hover {
+    color: white;
+}
+
+#search-navigation .nav-links a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+#search-navigation .nav-links a:hover,
+#search-navigation .nav-links a.active {
+    color: #bc6c90;
+}
+
+#search-navigation .nav-links a.active::after,
+#search-navigation .nav-links a:hover::after {
+    background: #bc6c90;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* Community Page */
+
 #product1 {
     text-align: center;
     background-image: url("images/background.png");
@@ -319,29 +366,70 @@ border-bottom-right-radius: 0;
     font-weight: 100px;
 }
 
+.filter-dropdowns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2%;
+  }
+  
+  .dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  .filter-text {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .filter-text:hover {
+    border-color: #e6699f;
+  }
+  
+  .filter-text:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(174, 95, 129, 0.5);
+    border-color: #ae5f81;
+  }
+  
+
 #product2 {
     text-align: center;
+    background-image: url("images/background.png");
+    padding: 4%;
 }
 
 #product2 .pro-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    gap: 5px;
     padding-top: 20px;
     flex-wrap: wrap;
+    
 }
 
 #product2 .pro {
 
-    width: 23%;
+    width: 12%;
     min-width: 250px;
-    padding: 10px 12px;
+    padding: 10px;
     border: 1px solid #e6cce7;                                                            
     border-radius: 25px;
     cursor: pointer;
     box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
     margin: 15px 0;
     background-color: #ffffff53;
-    padding: 10px;
     min-width: 100px;
     transition: transform 0.5s;
 }
@@ -358,18 +446,18 @@ border-bottom-right-radius: 0;
 
 #product2 .pro .des {
     text-align: start;
-    padding: 10px 0;
+    padding: 0;
 }
 
 #product2 .pro .des span {
     color: #ae5f81;
-    font-size: 12px;
+    font-size: 10px;
 }
 
 #product2 .pro .des h5 {
     padding-top: 7px;
     color: #40222f;
-    font-size: 16px;
+    font-size: 12px;
 }
 
 #product2 .pro .des h5:hover {
@@ -377,14 +465,13 @@ border-bottom-right-radius: 0;
 }
 
 #product2 .pro .des i {
-    font-size: 14px;
+    font-size: 12px;
     color: #ae5f81;
     padding-top: 20px;
 }
 
 #product2 .pro .des h4{
-    padding-top: 7px;
-    font-size: 15px;
+    font-size: 8px;
     font-weight: 500;
     color: #40222f;
 }
@@ -400,6 +487,116 @@ border-bottom-right-radius: 0;
     font-size: 10px;
     font-weight: 100px;
 }
+
+#product2 h2 {
+    font-size: 20px;
+    font-weight: 100px;
+    padding-bottom: 0;
+}
+
+  #product2 .flip-container {
+    perspective: 1000px;
+    width: 100%;
+    height: 230px; /* Set a fixed height for the images */
+    position: relative;
+  }
+  
+  #product2 .flipper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+  
+  #product2 .flip-container.flip .flipper {
+    transform: rotateY(180deg);
+  }
+  
+  #product2 .front, #product2 .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+  
+  #product2 .back {
+    transform: rotateY(180deg);
+  }
+  
+  #product2 .pro .des {
+    text-align: start;
+    padding:0;
+  }
+  
+  #product2 .pro .des span {
+    color: #ae5f81;
+    font-size: 10px;
+    padding: 0;
+  }
+  
+  #product2 .pro .des h5 {
+    padding-top: 8px;
+    color: #40222f;
+    font-size: 14px;
+  }
+  
+  #product2 .pro .des h5:hover {
+    color: #cf85a6ad;
+  }
+  
+  #product2 .pro .des i {
+    font-size: 14px;
+    color: #ae5f81;
+    padding-top: 20px;
+  }
+  
+  #product2 .pro .des h4 {
+    padding-top: 3px;
+    font-size: 10px;
+    font-weight: 500;
+    color: #40222f;
+  }
+  
+  #product2 .pro .star {
+    padding-top: 20px;
+    color: #ae5f81;
+    font-size: 18px;
+    font-weight: 100px;
+  }
+  
+  #product2 .pro p {
+    font-size: 10px;
+    font-weight: 100px;
+  }
+  
+  #backToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed position */
+    bottom: 20px; /* 20px from the bottom */
+    right: 30px; /* 20px from the right */
+    z-index: 95; /* Make sure it does not overlap */
+    border: rgb(255, 255, 255); /* Remove borders */
+    outline: none; /* Remove outline */
+    background-color: #ffffff; /* Background color */
+    color: rgb(175, 12, 154); /* Text color */
+    cursor: pointer; /* Pointer/hand icon */
+    padding: 15px; /* Some padding */
+    border-radius: 50%; /* Rounded corners for circle */
+    font-size: 15px; /* Increase font size */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Add shadow for better visibility */
+    opacity: 75%;
+  }
+  
+  #backToTopBtn:hover {
+    opacity: 100%; /* Add a darker background on hover */
+  }
+  
+  #backToTopBtn i {
+    margin: 0; /* Remove default margin from icon */
+  }
+  
+  
 
 #banner {
     margin-top: 0px;
@@ -653,58 +850,8 @@ footer .copyright strong:hover {
 }
 
 
-/* Community Page */
-#comtext {
-    background-color: #ecc8d9;
-    display: flex;
-    text-decoration: none;
-}
 
-#comtext h2{
-    text-decoration: underline;
-    color: #e9ceda;
-}
 
-#comtext p{
-    color: #0c0c0c;
-    font-size: 20px;
-}
-
-#comtext button {
-    background-image: url("images/washi.png");
-    background-size: 100%;
-    background-color: transparent;
-    color: #ae5f81;
-    border: 0;
-    padding: 18px 80px 14px 80px;
-    cursor: pointer;
-    font-weight: 700;
-    font-size: 15px;
-    border-radius: 10px;
-}
-
-#comtext button:hover{
-    color: white;
-}
-
-#comtext .comleft {
-    width: 40%;
-    margin-right: 50px;
-    justify-content: center;
-    text-align: center;
-    margin-top: 15%;
-}
-
-#comtext .comright {
-    width: 65%;
-    padding-top: 30px;
-}
-
-#comtext .comright h2 {
-    color: #815569;
-    text-decoration: none;
-    font-size: 30px;
-}
 
 
 /* Shop Page */
@@ -1175,9 +1322,119 @@ footer .copyright strong:hover {
     }
 
     #product1 .pro {
-        width: 100%;
+        width: 50%;
+    }
+
+    #product2 h2 {
+       font-size: 30px;
+       padding: 0%;
     }
     
+    #product2 .pro-container {
+        justify-content: space-between;
+        display: flex; 
+        flex-wrap: wrap;
+        gap: 2px;
+      }
+    
+      #product2 .pro {
+        width: 24%; 
+        min-width: 40px;
+        padding: 5px;
+        margin: 1px; /* Adjust margin to fit within the row */
+        border-radius: 5px; /* Further reduce border radius */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid #e6cce7;                                                            
+        cursor: pointer;
+        background-color: #ffffff53;
+        transition: transform 0.5s;
+      }
+
+      #product2 .pro .des {
+        text-align: left;
+        padding: 0;
+      }
+    
+      #product2 .pro .des span {
+        color: #ae5f81;
+        font-size: 6px;
+      }
+    
+      #product2 .pro .des h5 {
+        font-size: 10px; 
+        color: #40222f;
+        padding-top: 2px;
+      }
+    
+      #product2 .pro .des h4 {
+        font-size: 6px; 
+        font-weight: 500;
+        color: #40222f;
+        padding: 0;
+      }
+
+      #product2 .pro img{
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+  #product2 .flip-container {
+    perspective: 1000px;
+    width: 100%;
+    height: auto; /* Set height to auto to maintain aspect ratio */
+    position: relative;
+  }
+
+  #product2 .flipper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 150%; /* Adjust the padding to maintain aspect ratio */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+
+  #product2 .flip-container.flip .flipper {
+    transform: rotateY(180deg);
+  }
+
+  #product2 .front, #product2 .back {
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  #product2 .back {
+    transform: rotateY(180deg);
+  }
+
+  #product2 .pro .star {
+    padding-top: 20px;
+    color: #ae5f81;
+    font-size: 18px;
+    font-weight: 100px;
+  }
+
+  #product2 .pro p {
+    font-size: 10px;
+    font-weight: 100px;
+  }
+    
+    #product2 .pro:hover {
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.01);
+        transform: translateY(-5px)
+    }
+    
+    #product2 .pro .des h5:hover {
+        color: #cf85a6ad;
+    }
+
     #banner {
         height: 10vh;
     }
@@ -1200,6 +1457,32 @@ footer .copyright strong:hover {
         font-size: 8px;
     }
 
+    #newsletter2 {
+        padding: 10px;
+        box-sizing: border-box;
+      }
+    
+      #newsletter2 .container {
+        margin: 0;
+        width: 100%;
+      }
+    
+      #newsletter2 .form {
+        width: 100%;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);;
+      }
+    
+      #newsletter2 input {
+        width: calc(100% - 100px); /* Adjust width considering button width */
+        margin-bottom: 10px;
+      }
+    
+      #newsletter2 button {
+        width: 100px;
+        white-space: nowrap;
+      }
+    }
+
     /*Single Product*/
     #prodetails {
         display: flex;
@@ -1214,4 +1497,3 @@ footer .copyright strong:hover {
     #prodetails .single-pro-details {
         width: 100%;
     }
-}
