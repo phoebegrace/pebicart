@@ -140,7 +140,7 @@ body {
 
 /* Home Page */
 #hero {
-    background-image: url(images/hero.png);
+    background-image: url(images/background.png);
     height: 90vh;
     width: 100%;
     background-size: cover;
@@ -391,6 +391,7 @@ border-bottom-right-radius: 0;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
+    color: #000;
   }
   
   .filter-text:hover {
@@ -1178,7 +1179,8 @@ footer .copyright strong:hover {
 
 /* Start Media query */
 
-@media (max-width:799px) {
+@media (max-width:820px) {
+
     .section-p1 {
         padding: 40px 40px;
     }
@@ -1259,12 +1261,104 @@ footer .copyright strong:hover {
         justify-content: center;
     }
 
+      #product2 .pro .des {
+        text-align: left;
+        margin-top: 0;
+      }
+    
+      #product2 .pro .des span {
+        color: #ae5f81;
+        font-size: 6px;
+        margin-top: 0;
+      }
+    
+      #product2 .pro .des h5 {
+        font-size: 10px; 
+        color: #40222f;
+        padding-top: 2px;
+      }
+    
+      #product2 .pro .des h4 {
+        font-size: 6px; 
+        font-weight: 500;
+        color: #40222f;
+        padding: 0;
+      }
+
     #product1 .pro {
         margin: 15px 40px;
         width:30%;
         transition: 0.2s;
         position: relative;
     }
+
+    #product2 .pro {
+        width: 10%; 
+        min-width: 40px;
+        padding: 5px;
+        height: fit-content;
+        margin: 1px; /* Adjust margin to fit within the row */
+        border-radius: 5px; /* Further reduce border radius */
+        display: flex;
+        gap: 0;
+        flex-direction: column;
+        justify-content: center;
+        border: 1px solid #e6cce7;                                                            
+        cursor: pointer;
+        background-color: #ffffff53;
+        transition: transform 0.5s;
+      }
+
+      #product2 .pro-container {
+        justify-content: space-between;
+        display: flex; 
+        flex-wrap: wrap;
+        gap: 3px;
+      }
+
+      #product2 .flipper {
+        position: relative;
+        width: 100%;
+        height: 0;
+        padding-bottom: 150%; /* Adjust the padding to maintain aspect ratio */
+        transform-style: preserve-3d;
+        transition: transform 0.6s;
+      }
+
+      
+  #product2 .flip-container {
+    perspective: 1000px;
+    width: 100%;
+    height: auto; /* Set height to auto to maintain aspect ratio */
+    position: relative;
+  }
+
+  #product2 .flipper {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 150%; /* Adjust the padding to maintain aspect ratio */
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+  }
+
+      #product2 .pro img{
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+        margin-bottom: 0;
+    }
+
+    #newsletter2 .container {
+        margin: 0;
+        width: 75%;
+      }
+    
+      #newsletter2 .form {
+        width: 100%;
+        box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);;
+        font-size: 10px;
+      }
 
     #banner {
         height: 20vh;
@@ -1320,6 +1414,31 @@ footer .copyright strong:hover {
     #feature .fe-box {
         margin: 0 0 15px 0;
     }
+
+    #search-navigation .nav-links a {
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: 600;
+        color: #1a1a1a;
+        padding: 2px 5px;
+        border-radius: 5px;
+        transition: 0.3s ease;
+    }
+
+    .dropdown {
+        font-size: 10px;
+      }
+
+      .filter-text {
+        padding: 10px 15px;
+        font-size: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #fff;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+        color: #000;
+      }
 
     #product1 .pro {
         width: 50%;
@@ -1458,23 +1577,24 @@ footer .copyright strong:hover {
     }
 
     #newsletter2 {
-        padding: 10px;
+        padding: 5px;
         box-sizing: border-box;
       }
     
       #newsletter2 .container {
         margin: 0;
-        width: 100%;
+        width: 75%;
       }
     
       #newsletter2 .form {
         width: 100%;
         box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.06);;
+        font-size: 10px;
       }
     
       #newsletter2 input {
         width: calc(100% - 100px); /* Adjust width considering button width */
-        margin-bottom: 10px;
+        margin-bottom: 5px;
       }
     
       #newsletter2 button {
