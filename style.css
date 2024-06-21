@@ -1268,12 +1268,12 @@ footer .copyright strong:hover {
     
       #product2 .pro .des span {
         color: #ae5f81;
-        font-size: 6px;
+        font-size: 4px;
         margin-top: 0;
       }
     
       #product2 .pro .des h5 {
-        font-size: 10px; 
+        font-size: 8px; 
         color: #40222f;
         padding-top: 2px;
       }
@@ -1293,11 +1293,11 @@ footer .copyright strong:hover {
     }
 
     #product2 .pro {
-        width: 10%; 
+        width: 11%; 
         min-width: 40px;
-        padding: 5px;
+        padding: 3px;
         height: fit-content;
-        margin: 1px; /* Adjust margin to fit within the row */
+        margin: 2px; /* Adjust margin to fit within the row */
         border-radius: 5px; /* Further reduce border radius */
         display: flex;
         gap: 0;
@@ -1310,10 +1310,11 @@ footer .copyright strong:hover {
       }
 
       #product2 .pro-container {
-        justify-content: space-between;
-        display: flex; 
+        justify-content: flex-start;
+        display:flex; 
         flex-wrap: wrap;
-        gap: 3px;
+        gap: 8px;
+        
       }
 
       #product2 .flipper {
@@ -1347,6 +1348,10 @@ footer .copyright strong:hover {
         height: auto;
         border-radius: 5px;
         margin-bottom: 0;
+    }
+
+    .filter-text {
+        padding: 10px 10px;
     }
 
     #newsletter2 .container {
